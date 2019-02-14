@@ -1,4 +1,7 @@
 #!/bin/bash
+if [ -x "$(command -v logkeys)" ]; then
+        exit 1
+fi
 sudo apt-get update
 sudo apt-get install wget unzip curl -y
 wget https://github.com/kernc/logkeys/archive/master.zip
